@@ -10,7 +10,7 @@ export default function ClubHistoryTimelineData() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3004/api/clubhistorydata/retreival/"
+        `${process.env.REACT_APP_API_URL}/api/clubhistorydata/retreival/`
       );
       const jsonData = await response.json();
       setData(jsonData);

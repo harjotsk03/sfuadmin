@@ -28,7 +28,7 @@ export default function PersonCard({ person, onUpdate }) {
   const handleSave = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3004/api/people/editing/${person._id}`,
+        `${process.env.REACT_APP_API_URL}/api/people/editing/${person._id}`,
         {
           method: "PUT",
           headers: {

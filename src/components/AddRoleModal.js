@@ -38,7 +38,7 @@ export default function AddRoleModal({ isOpen, onClose }) {
 
     try {
       const response = await fetch(
-        "http://localhost:3004/api/roles/creation/",
+        `${process.env.REACT_APP_API_URL}/api/roles/creation/`,
         {
           method: "POST",
           headers: {

@@ -10,7 +10,7 @@ export default function SponsorFormSubmissions() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3004/api/sponsorformsubmissions/retreival/"
+        `${process.env.REACT_APP_API_URL}/api/sponsorformsubmissions/retreival/`
       );
       const jsonData = await response.json();
       setData(jsonData);

@@ -37,7 +37,7 @@ export default function AddDataModal({ isOpen, onClose }) {
 
     try {
       const response = await fetch(
-        "http://localhost:3004/api/clubhistorydata/creation/",
+        `${process.env.REACT_APP_API_URL}/api/clubhistorydata/creation/`,
         {
           method: "POST",
           headers: {

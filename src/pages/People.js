@@ -15,7 +15,7 @@ export default function People() {
   const fetchPeople = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3004/api/people/retreival/"
+        `${process.env.REACT_APP_API_URL}/api/people/retreival/`
       );
       const data = await response.json();
       setPeople(data);

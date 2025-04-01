@@ -21,7 +21,7 @@ export default function ClubHistoryTimelineDataCard({ data, onUpdate }) {
   const handleSave = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3004/api/clubhistorydata/editing/${data._id}`,
+        `${process.env.REACT_APP_API_URL}/api/clubhistorydata/editing/${data._id}`,
         {
           method: "PUT",
           headers: {

@@ -63,7 +63,7 @@ export default function AddPersonModal({ isOpen, onClose }) {
       }
 
       const response = await fetch(
-        "http://localhost:3004/api/people/creation/",
+        `${process.env.REACT_APP_API_URL}/api/people/creation/`,
         {
           method: "POST",
           body: formDataToSend,

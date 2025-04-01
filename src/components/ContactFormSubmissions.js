@@ -10,7 +10,7 @@ export default function ContactFormSubmissions() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3004/api/contactformsubmissions/retreival/"
+        `${process.env.REACT_APP_API_URL}/api/contactformsubmissions/retreival/`
       );
       const jsonData = await response.json();
       setData(jsonData);

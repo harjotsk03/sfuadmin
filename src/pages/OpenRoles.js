@@ -12,7 +12,7 @@ export default function OpenRoles() {
   const fetchRoles = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3004/api/roles/retreival/"
+        `${process.env.REACT_APP_API_URL}/api/roles/retreival/`
       );
       const data = await response.json();
       setRoles(data);
